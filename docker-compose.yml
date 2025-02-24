@@ -11,7 +11,7 @@ services:
     networks:
       - app_network
     volumes:
-    -15_web_volume:/app/data
+      - 15_web_volume:/app/data
 
   worker:
     build: ./worker
@@ -47,5 +47,5 @@ networks:
 
 volumes:
   postgres_data:
-  15_web_volume
+  15_web_volume:
 
