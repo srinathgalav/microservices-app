@@ -10,6 +10,8 @@ services:
       - db
     networks:
       - app_network
+    volumes:
+    -15_web_volume:/app/data
 
   worker:
     build: ./worker
@@ -18,6 +20,7 @@ services:
       - redis
     networks:
       - app_network
+
 
   db:
     image: postgres
@@ -44,4 +47,5 @@ networks:
 
 volumes:
   postgres_data:
+  15_web_volume
 
